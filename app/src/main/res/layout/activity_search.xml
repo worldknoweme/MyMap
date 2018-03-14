@@ -4,31 +4,26 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-   android:background="#ffffff">
+    android:background="#ffffff">
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/city"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="4"
-            android:inputType="text"
-            android:hint="城市名称"/>
+
         <EditText
             android:id="@+id/editText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="text"
-            android:hint="地址名称"/>
+            android:hint="请输入搜索内容"/>
         <Button
             android:id="@+id/search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="搜索" />
     </LinearLayout>
+
 
     <com.baidu.mapapi.map.MapView
         android:id="@+id/bmapView"
