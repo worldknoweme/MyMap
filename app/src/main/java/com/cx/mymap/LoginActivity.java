@@ -27,6 +27,7 @@ import cn.bmob.v3.listener.FindListener;
 public class LoginActivity extends Activity {
 
     private EditText usernameEdit,passwordEdit;
+    private String usernameString;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,13 +47,15 @@ public class LoginActivity extends Activity {
 
     public void login(View view){
         BmobQuery<Operator> bmobQuery = new BmobQuery<Operator>();
-        bmobQuery.addWhereEqualTo("username",usernameEdit.getText().toString()).addWhereEqualTo("password",passwordEdit.getText().toString());
+        usernameString = usernameEdit.getText().toString();
+        bmobQuery.addWhereEqualTo("username",usernameString).addWhereEqualTo("password",passwordEdit.getText().toString());
         bmobQuery.count(Operator.class, new CountListener() {
             @Override
             public void done(Integer count, BmobException e) {
                 if(e==null){
                    if(count>=1){
                        toast("登录成功！");
+                       MyMapApplication.username = usernameString;
                        //进行页面跳转
                        Intent intent = new Intent(LoginActivity.this,MainActivity.class);
                        startActivity(intent);

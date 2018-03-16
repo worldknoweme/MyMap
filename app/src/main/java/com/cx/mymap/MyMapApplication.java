@@ -2,6 +2,7 @@ package com.cx.mymap;
 
 import android.app.Application;
 
+import com.baidu.location.BDLocation;
 import com.baidu.mapapi.SDKInitializer;
 
 /**
@@ -9,7 +10,12 @@ import com.baidu.mapapi.SDKInitializer;
  */
 
 public class MyMapApplication extends Application{
+    /**
+     * 当前地址信息
+     */
+    public static BDLocation bdLocation;
 
+    public static String username;
     @Override
     public void onCreate() {
         super.onCreate();

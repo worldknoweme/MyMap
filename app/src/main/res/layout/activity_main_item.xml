@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center" >
+    <TextView
+        android:id="@+id/historyType"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="路线规划"
+        android:textSize="@dimen/x20"/>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x10">
+        <TextView
+            android:id="@+id/historyDes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="大明湖到千佛山"
+            android:textSize="@dimen/x12" />
+        <TextView
+            android:id="@+id/historyCreate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2018-03-16 20:20:20"
+            android:textSize="@dimen/x12"
+            android:layout_marginLeft="@dimen/x8"/>
+    </LinearLayout>
+
+</LinearLayout>

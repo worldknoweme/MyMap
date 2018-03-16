@@ -58,7 +58,10 @@
             android:process=":remote" />
 
         <activity android:name=".SearchActivity" />
-        <activity android:name=".RoadInfoActivity"></activity>
+        <activity android:name=".RoadInfoActivity" />
+        <activity android:name=".PlanActivity" />
+        <activity android:name=".BNDemoGuideActivity" />
+        <activity android:name=".HistoryActivity"></activity>
     </application>
 
 </manifest>

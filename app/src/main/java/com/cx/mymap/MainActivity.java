@@ -32,9 +32,10 @@ import java.util.List;
 public class MainActivity extends Activity {
     GridView gvInfo;// 创建GridView对象
     // 定义字符串数组，存储系统功能
-    String[] titles = new String[] { "定位", "路况", "退出" };
+    String[] titles = new String[] { "定位", "路况","路线规划", "搜索历史","退出" };
     // 定义int数组，存储功能对应的图标
     int[] images = new int[] { R.drawable.addoutaccount,R.drawable.addinaccount,
+            R.drawable.accountflag,R.drawable.outaccountinfo,
             R.drawable.exit };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +59,14 @@ public class MainActivity extends Activity {
                         startActivity(intent);
                         break;
                     case 2:
+                        intent = new Intent(MainActivity.this,PlanActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 3:
+                        intent = new Intent(MainActivity.this,HistoryActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 4:
                         finish();// 关闭当前Activity
                         break;
                 }
